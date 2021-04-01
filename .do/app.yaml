@@ -6,4 +6,5 @@ static_sites:
     deploy_on_push: true
     repo: ereborstudios/flappy-coin-collector
   name: flappy-coin-collector
-  output_dir: builds/collector-example-html5-0.1.0/
+  build_command: unzip -d dist builds/collector-example-html5.zip
+  output_dir: dist/
