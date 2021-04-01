@@ -1,0 +1,8 @@
+spec:
+  name: flappy-coin-collector
+  static_sites:
+  - environment_slug: html
+    git:
+      branch: main
+      repo_clone_url: https://github.com/ereborstudios/flappy-coin-collector.git
+    name: flappy-coin-collector

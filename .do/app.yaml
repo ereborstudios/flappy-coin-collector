@@ -1,0 +1,9 @@
+name: flappy-coin-collector
+static_sites:
+- environment_slug: html
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: ereborstudios/flappy-coin-collector
+  name: flappy-coin-collector
+  output_dir: builds/collector-example-html5-0.1.0/
