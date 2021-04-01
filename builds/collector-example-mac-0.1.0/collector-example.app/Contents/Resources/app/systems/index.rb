@@ -1,0 +1,7 @@
+require "app/systems/handle_input.rb"
+require "app/systems/handle_movement.rb"
+require "app/systems/spawn_items.rb"
+require "app/systems/item_movement.rb"
+require "app/systems/destroy_items.rb"
+require "app/systems/collecting.rb"
+require "app/systems/autoplayer.rb"

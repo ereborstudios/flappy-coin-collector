@@ -1,0 +1,27 @@
+[project]
+# The name of your game's executable. This should only contain a-z, A-Z, 0-9, _ or -.
+name = "collector-example"
+# The game's title. This will show up in the tile bar of your executable.
+title = "collector-example"
+version = "0.1.0"
+authors = ["TODO: My Name <todo@example.com>"]
+icon = "metadata/icon.png"
+
+[dragonruby]
+version = "2.7"
+edition = "pro"
+
+[itch]
+# The Project URL you set when you created the game on Itch.io. https://my-username.itch.io/my-game.
+# This will also be the name of your build files, so fill it out even if you aren't uploading to Itch.io.
+url = "todo-change-me"
+# Your username on Itch.io.
+username = "todo-change-me"
+
+[dependencies]
+draco = "0.6.1"
+draco-common = "0.1.1"
+collector = "0.1.0"
+draco-periodic = "0.2.0"
+draco-state = "0.2.0"
+draco-events = "0.2.0"
