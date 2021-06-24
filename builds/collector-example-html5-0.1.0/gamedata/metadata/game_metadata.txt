@@ -7,3 +7,4 @@ gameid=collector-example
 gametitle=collector-example
 version=0.1.0
 icon=metadata/icon.png
+compile_ruby=false

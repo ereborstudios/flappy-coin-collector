@@ -8,7 +8,7 @@ authors = ["TODO: My Name <todo@example.com>"]
 icon = "metadata/icon.png"
 
 [dragonruby]
-version = "2.7"
+version = "2.10"
 edition = "pro"
 
 [itch]

@@ -1,3 +1,6 @@
 logs/
 exceptions/
 smaug/
+last_replay.txt
+replay.txt
+dist/
