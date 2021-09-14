@@ -1,0 +1,36 @@
+name: Waypoint
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+env:
+  WAYPOINT_SERVER_TOKEN: ${{ secrets.WAYPOINT_SERVER_TOKEN }}
+  WAYPOINT_SERVER_ADDR: waypoint.smaug.dev:9701
+  WAYPOINT_SERVER_TLS: 1
+  WAYPOINT_SERVER_TLS_SKIP_VERIFY: 1
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - uses: tjaartvdwalt/action-setup-waypoint@main
+        with:
+          version: '0.5.0'
+      - run: waypoint init
+      - run: waypoint build -remote
+      - run: waypoint deploy -remote -release=false
+      - run: waypoint release -remote -prune-retain=0
